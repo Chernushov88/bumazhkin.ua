@@ -1,0 +1,153 @@
+<header class="header">
+    <div class="wrapper">
+        <div class="header__box">
+            <div class="header__logo">
+                <a href="./index.html" class="header__logo">
+                    <img src="./img/logo.svg" alt="Бюро бумажкин" title="Бюро бумажкин" />
+                    <h1 class="offscreen">Бюро бумажкин</h1>
+                </a>
+            </div>
+
+            <div class="header__info">
+                <div class="header__info-row header__info-top">
+                    <div class="header__address">
+                        <svg class="icon icon-map">
+                            <use xlink:href="./img/icons/sprite/sprite.svg#map-pin"></use>
+                        </svg>
+                        <address>Ул. Пушкинская, 8Б, оф. 35, Киев, Украина</address>
+                    </div>
+
+                    <div class="header__phone">
+                        <a href="tel:+380443945068">
+                            <svg class="icon icon-phone">
+                                <use xlink:href="./img/icons/sprite/sprite.svg#phone"></use>
+                            </svg>
+                            <span>+38 (044) 394 50 68</span>
+                        </a>
+                    </div>
+
+                    <div class="header__lang">
+                        <a class="active" href="#">RU</a>
+                        <span>/</span>
+                        <a href="#">UA</a>
+                    </div>
+                </div>
+
+                <div class="header__info-row header__info-bottom">
+                    <nav class="nav" id="nav">
+                        <h2 class="offscreen">Навигационное меню</h2>
+                        <button class="burger">
+                            <i></i>
+                        </button>
+
+                        <div class="overlay">
+                            <ul class="nav__list">
+                                <li class="nav__item">
+                                    <a class="nav__link scrolling__link" href="#possibility">Возможности</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class="nav__link scrolling__link" href="#about">О нас</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class="nav__link" href="#services">Услуги</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class="nav__link scrolling__link" href="#price">Тарифы</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class="nav__link scrolling__link" href="#review">Отзывы</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class="nav__link" href="/blog-ua">Блог</a>
+                                </li>
+                            </ul>
+
+                            <button class="btn btn-transparent" data-remodal-target="callback">Заказать звонок</button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero">
+            <div class="hero__box">
+                <div class="hero__content">
+                    <h2 class="hero__title">
+                        Бухгалтер, кадровик, юрист и финансист в одном сервисе.
+                    </h2>
+                    <p class="hero__text">
+                        «Бумажки» мы берем на себя, развивайте бизнес свободно.
+                        Сервис создан для людей, которые ценят свое время.
+                        Для компаний и частных предпринимателей.
+                    </p>
+
+                    <form class="hero__form form-validate" name="order">
+                        <div class="form__item">
+                            <input class="input" type="text" name="Телефон, Имя" placeholder="Телефон, Имя" required>
+                        </div>
+
+                        <div class="form__item btn-wrap">
+                            <input class="btn" type="submit" value="Оставить заявку">
+                        </div>
+                    </form>
+
+                    <!-- TThis hidden block -->
+                    <div style="visibility: hidden;">
+                        <p class="hero__text-small">Нажимая на кнопку “Оставить заявку” вы соглашаетесь с</p>
+                        <a class="hero__policy" href="">Политикой конфиденциальности</a>
+                    </div>
+                    <!-- End hidden block -->
+
+                    <ul class="hero__social social">
+                        <li class="social__item">
+                            <a class="social__link" href="https://telegram.me/bumazhkin_bot" target="_blank" rel="noopener noreferrer">
+                                <svg class="icon" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="hover" d="M32.8214 11.2292C32.6137 11.0024 32.2861 10.9415 32.0147 11.0573L9.42111 20.7081C9.1708 20.8151 9.00627 21.0543 9.00018 21.3215C8.99408 21.5881 9.14736 21.8342 9.39298 21.9522L14.7878 24.541L16.1321 32.4108C16.1757 32.7095 16.4162 32.9496 16.7293 32.993C16.9543 33.0246 17.1779 32.9473 17.3326 32.7918L21.5916 28.636L27.6694 32.8723C27.8644 33.0077 28.1156 33.0374 28.3369 32.9519C28.5586 32.8663 28.7208 32.6765 28.7677 32.4483L32.9864 11.8202C33.0281 11.6157 32.9742 11.3966 32.8214 11.2292ZM15.3447 23.2791L11.372 21.3727L27.0666 14.6688L15.3447 23.2791ZM17.5449 25.3186L16.891 28.5088L16.1856 24.3786L24.8091 18.0443L17.7367 24.9687C17.6373 25.0656 17.5712 25.1919 17.5449 25.3186ZM17.9729 30.2263L18.7107 26.6281L20.4315 27.8273L17.9729 30.2263ZM27.6014 31.1383L19.3173 25.3648L31.1517 13.7787L27.6014 31.1383Z" fill="white" />
+                                    <circle class="hover" cx="22.5" cy="22.5" r="21.5" stroke="white" stroke-width="2" />
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li class="social__item">
+                            <a class="social__link" href="https://www.facebook.com/bureau.bumazhkin" target="_blank" rel="noopener noreferrer">
+                                <svg class="icon" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="hover" d="M27.8826 17.5918C28.2684 17.5918 28.5815 17.2787 28.5815 16.8928V12.699C28.5815 12.3131 28.2684 12 27.8826 12H23.6887C20.9907 12 18.7959 14.1948 18.7959 16.8928V20.3877H16.699C16.3131 20.3877 16 20.7008 16 21.0867V25.2805C16 25.6663 16.3131 25.9795 16.699 25.9795H18.7959V35.1593C18.7959 35.5452 19.109 35.8583 19.4949 35.8583H23.6887C24.0745 35.8583 24.3877 35.5452 24.3877 35.1593V25.9795H27.1836C27.5251 25.9795 27.8169 25.7325 27.8732 25.3956L28.5722 21.2018C28.6058 20.9991 28.5489 20.7917 28.4161 20.6347C28.2833 20.4781 28.0881 20.3877 27.8826 20.3877H24.3877V17.5918H27.8826ZM23.6887 21.7856H27.0573L26.5913 24.5815H23.6887C23.3029 24.5815 22.9897 24.8947 22.9897 25.2805V34.4604H20.1938V25.2805C20.1938 24.8947 19.8807 24.5815 19.4949 24.5815H17.3979V21.7856H19.4949C19.8807 21.7856 20.1938 21.4725 20.1938 21.0867V16.8928C20.1938 14.966 21.7619 13.3979 23.6887 13.3979H27.1836V16.1938H23.6887C23.3029 16.1938 22.9897 16.507 22.9897 16.8928V21.0867C22.9897 21.4725 23.3029 21.7856 23.6887 21.7856Z" fill="white" />
+                                    <circle class="hover" cx="22.5" cy="22.5" r="21.5" stroke="white" stroke-width="2" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="hero__img">
+                    <img src="./img/hero-image.svg" alt="Бухгалтер, кадровик, юрист и финансист в одном сервисе">
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup -->
+        <div class="remodal formBox" data-remodal-id="callback">
+            <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+            <form class="form form-validate" name="callback">
+
+                <p class="form__title">Заполните заявку</p>
+                <p class="form__text">менеджер свяжется с Вами для <br> уточнения деталей</p>
+
+                <label>
+                    Имя
+                    <input class="input" type="text" name="name" required>
+                </label>
+
+                <label>
+                    Номер телефона
+                    <input class="input phone-mask" type="tel" name="phone" required>
+                </label>
+
+                <div class="btn-wrap">
+                    <input class="btn" type="submit" value="Перезвоните">
+                </div>
+            </form>
+        </div>
+        <!-- end popup -->
+    </div>
+</header>

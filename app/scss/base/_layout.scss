@@ -1,0 +1,23 @@
+@import "./helpers/_vars";
+
+.wrapper {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @media (max-width: $laptop) {
+    max-width: 1024px;
+  }
+  @media (max-width: $tablet) {
+    max-width: 960px;
+  }
+  @media (max-width: $note) {
+    max-width: 725px;
+    padding: 0 15px;
+  }
+  @media (max-width: $phone-xl) {
+    width: 100%;
+  }
+}

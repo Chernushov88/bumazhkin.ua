@@ -1,0 +1,181 @@
+@import "../helpers/_vars";
+@import "../helpers/_mixins";
+
+.howItWork {
+  padding-top: 70px;
+  padding-bottom: 84px;
+  background: url(../img/slide-bg.svg) no-repeat 40% 70%;
+  background-size: contain;
+
+  @media (max-width: $tablet) {
+    padding-bottom: 0;
+    background-size: cover;
+  }
+  @media (max-width: $phone-xl) {
+    background: $violet;
+  }
+
+  h2 {
+    text-align: center;
+    @include section-title;
+
+    @media (max-width: $phone-xl) {
+      color: #fff;
+    }
+  }
+
+  .slider {
+    margin-top: -40px;
+    padding-top: 40px;
+    min-height: 835px;
+
+    @media (max-width: $tablet) {
+      margin-top: 0;
+      padding-top: 0;
+      min-height: 935px;
+    }
+    @media (max-width: $phone-xl) {
+      min-height: auto;
+    }
+  }
+
+  .slide {
+    padding-top: 100px;
+
+    @media (max-width: $tablet) {
+      padding-top: 50px;
+    }
+
+    &__box {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 100px;
+      min-height: 400px;
+      z-index: 2;
+      color: #fff;
+
+      @media (max-width: $laptop) {
+        padding-left: 140px;
+      }
+      @media (max-width: $tablet) {
+        flex-direction: column;
+        min-height: 250px;
+        padding-left: 60px;
+      }
+      @media (max-width: $note) {
+        padding-left: 0;
+      }
+      @media (max-width: $phone-xl) {
+        min-height: auto;
+      }
+
+      p {
+        margin-bottom: 30px;
+        line-height: 1.5;
+
+        @media (max-width: $laptop) {
+          margin-bottom: 15px;
+        }
+      }
+      strong {
+        display: block;
+        font-weight: 700;
+      }
+    }
+
+    &-mob {
+      .slide__photo {
+        margin-top: -50px;
+        margin-right: 90px;
+
+        @media (max-width: $laptop) {
+          margin-right: 20px;
+          margin-top: 0;
+        }
+        @media (max-width: $phone-xl) {
+          margin: 0 auto;
+        }
+      }
+    }
+
+    &__content,
+    &__photo {
+      z-index: 3;
+    }
+    &__content {
+      margin-top: 90px;
+      max-width: 620px;
+
+      @media (max-width: $laptop) {
+        margin-top: 40px;
+      }
+
+      @media (max-width: $phone-xl) {
+        margin-top: 35px;
+      }
+    }
+
+    &__photo {
+      @media (max-width: $tablet) {
+        margin-top: 0;
+        margin-bottom: 20px;
+        align-self: flex-end;
+        order: -1;
+      }
+      @media (max-width: $phone-xl) {
+        margin: 30px auto 0 auto;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+
+        @media (max-width: $tablet) {
+          max-width: 350px;
+        }
+        @media (max-width: $note) {
+          max-width: 250px;
+        }
+      }
+    }
+    &__num {
+      position: absolute;
+      left: 100px;
+      top: 55%;
+      transform: translateY(-50%);
+      font-weight: 700;
+      font-size: 300px;
+      line-height: 24px;
+      opacity: 0.15;
+      z-index: -1;
+      user-select: none;
+      pointer-events: none;
+
+      @media (max-width: $laptop) {
+        font-size: 240px;
+      }
+      @media (max-width: $tablet) {
+        font-size: 200px;
+      }
+      @media (max-width: $note) {
+        font-size: 140px;
+      }
+      @media (max-width: $phone-xl) {
+        top: 20px;
+        left: 10px;
+        transform: 0;
+        font-size: 100px;
+      }
+      @media (max-width: $phone) {
+      }
+    }
+    .btn-wrap {
+      margin-top: 20px;
+      @media (max-width: $phone-xl) {
+        margin: 20px auto;
+      }
+    }
+  }
+}

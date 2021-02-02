@@ -1,0 +1,129 @@
+@import "../helpers/_vars";
+@import "../helpers/_mixins";
+
+.footer {
+  padding-bottom: 60px;
+  background: $violet;
+  color: #fff;
+
+  @media (max-width: $tablet) {
+  }
+  @media (max-width: $note) {
+  }
+  @media (max-width: $phone-xl) {
+  }
+
+  p.copyright {
+    text-align: center;
+    width: 100%;
+    padding-top: 30px;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -2px;
+
+    @media (max-width: $phone-xl) {
+      flex-direction: column;
+    }
+
+    div:last-child {
+      margin-left: 17px;
+
+      @media (max-width: $phone-xl) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .col {
+    width: 50%;
+
+    @media (max-width: $phone-xl) {
+      width: 100%;
+    }
+  }
+
+  .link {
+    margin-top: 66px;
+    font-size: 24px;
+    line-height: 1.22;
+
+    @media (max-width: $tablet) {
+      font-size: 20px;
+    }
+
+    @media (max-width: $phone-xl) {
+      margin-top: 30px;
+      font-size: 18px;
+    }
+    p {
+      font-size: 24px;
+      line-height: 1.22;
+
+      @media (max-width: $tablet) {
+        font-size: 20px;
+      }
+      @media (max-width: $phone-xl) {
+        font-size: 16px;
+      }
+    }
+
+    a {
+      color: $orange;
+      border-bottom: 1px solid $orange;
+      transition: color $ease-out, border-color $ease-out;
+
+      &:hover {
+        color: darken($color: $orange, $amount: 10%);
+        border-color: darken($color: $orange, $amount: 10%);
+      }
+    }
+  }
+}
+
+#virtvox_callwidget_callback .virtvox_callwidget_btn {
+  left: 5vh !important;
+  right: unset !important;
+  box-shadow: 0 5px 10px #705ac6 !important;
+}
+
+#virtvox_callwidget_callback
+  .virtvox_callwidget_pulse
+  .virtvox_callwidget_pulse-bg {
+  fill: #705ac6 !important;
+}
+
+#virtvox_callwidget_callback
+  .virtvox_callwidget_pulse
+  circle.virtvox_callwidget_pulse-wave {
+  fill: #705ac6 !important;
+}
+
+.footer-btn {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  align-items: center;
+  text-align: center;
+  max-width: 40px;
+  height: 40px;
+  margin-left: auto;
+  border-radius: 50%;
+  background-image: linear-gradient(180deg, #ffbe34 0, #ff8e5e 100%);
+  box-shadow: inset 0 1px 0 rgba(239, 7, 7, 0.5);
+  position: relative;
+  top: -80px;
+}
+
+@media (max-width: $tablet) {
+  #virtvox_callwidget_callback {
+    display: none;
+  }
+  .footer-btn {
+    top: 33px;
+    margin-left: 0px;
+  }
+}

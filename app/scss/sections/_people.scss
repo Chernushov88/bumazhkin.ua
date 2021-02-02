@@ -1,0 +1,150 @@
+@import "../helpers/_vars";
+@import "../helpers/_mixins";
+
+.people {
+  padding-bottom: 80px;
+  background: url(../img/help.svg) no-repeat top/cover;
+
+  @media (max-width: $phone-xl) {
+    background: #eef2fa;
+  }
+
+  .wrapper {
+    padding-top: 226px;
+
+    @media (max-width: $phone-xl) {
+      padding-top: 80px;
+    }
+  }
+
+  h2 {
+    padding-bottom: 56px;
+    text-align: center;
+    @include section-title;
+
+    @media (max-width: $tablet) {
+      padding-bottom: 0;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 30px;
+    }
+  }
+  li {
+    width: 49%;
+    margin-bottom: 35px;
+    padding: 30px 38px;
+    background: #fff;
+    box-shadow: 0px 4px 20px #bdcff3;
+    border-radius: 34px;
+    overflow: hidden;
+
+    @media (max-width: $tablet) {
+      max-width: 500px;
+      margin-bottom: 30px;
+      width: 100%;
+    }
+    @media (max-width: $note) {
+    }
+    @media (max-width: $phone-xl) {
+      padding: 22px;
+    }
+
+    &:nth-child(1) h3 {
+      color: #0bccc9;
+    }
+    &:nth-child(2) h3 {
+      color: #39c0f8;
+    }
+    &:nth-child(3) {
+      h3 {
+        color: #7057d6;
+      }
+    }
+    &:nth-child(4) {
+      h3 {
+        color: #fca70c;
+      }
+    }
+  }
+
+  blockquote {
+    display: table;
+    position: relative;
+    padding: 26px 0px 15px 66px;
+    max-width: 320px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #393939;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 15px;
+      left: 17px;
+      width: 31px;
+      height: 25px;
+      background: url(../img/icons/quote2.svg) no-repeat center/cover;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -15px;
+      right: 20px;
+      width: 31px;
+      height: 25px;
+      background: url(../img/icons/quote1.svg) no-repeat center/cover;
+    }
+  }
+
+  h3 {
+    padding-top: 16px;
+    padding-bottom: 11px;
+    font-size: 30px;
+    line-height: 1.22;
+    font-weight: 700;
+
+    @media (max-width: $note) {
+      font-size: 24px;
+    }
+  }
+
+  p {
+    padding-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #393939;
+  }
+
+  .people__item-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eef2fa;
+
+    @media (max-width: $phone-xl) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .people__item-bottom {
+    display: block;
+    text-align: center;
+  }
+  .photo {
+    max-width: 300px;
+  }
+}

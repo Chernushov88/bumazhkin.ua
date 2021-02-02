@@ -1,0 +1,130 @@
+@import "../helpers/_vars";
+@import "../helpers/_mixins";
+
+.service {
+  background: linear-gradient(180deg, #eef2fa 31.11%, #eef2fa 54.11%);
+  padding-top: 180px;
+
+  @media (max-width: $tablet) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 43px;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 43px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    div:first-of-type {
+      max-width: 480px;
+      width: 100%;
+      margin: auto;
+
+      /* ONLY FOR IE11 */
+      @media all and (-ms-high-contrast: none) {
+        max-width: 100%;
+      }
+
+      @media (max-width: $tablet) {
+        max-width: 100%;
+      }
+    }
+    div:last-of-type {
+      padding-top: 14px;
+    }
+  }
+
+  h3 {
+    max-width: 100%;
+    @include section-title;
+  }
+  p {
+    padding-bottom: 28px;
+    line-height: 1.5;
+    color: #393939;
+  }
+
+  &__list {
+    padding-top: 340px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $laptop) {
+    }
+    @media (max-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+      li {
+        margin-top: 0px !important;
+        margin-left: 0px !important;
+        max-width: 100%;
+      }
+    }
+    @media (max-width: $note) {
+    }
+    @media (max-width: $phone-xl) {
+    }
+    @media (max-width: $phone) {
+    }
+
+    li {
+      max-width: 289px;
+
+      @media (max-width: $laptop) {
+        max-width: 240px;
+      }
+
+      strong {
+        font-size: 70px;
+        line-height: 1.22;
+        font-weight: 700;
+
+        @media (max-width: $laptop) {
+          font-size: 50px;
+        }
+
+        &:after {
+          content: "%";
+          font-size: 50px;
+          line-height: 61px;
+        }
+      }
+
+      p {
+        padding-top: 15px;
+        line-height: 1.5;
+        color: #000;
+      }
+
+      &:nth-of-type(1) {
+        margin-top: -43px;
+        margin-left: 61px;
+        strong {
+          color: #7057d6;
+        }
+      }
+      &:nth-of-type(2) {
+        margin-top: -86px;
+        margin-left: -38px;
+
+        strong {
+          color: #39c0f8;
+        }
+      }
+      &:nth-of-type(3) {
+        strong {
+          color: #0bccc9;
+        }
+      }
+    }
+  }
+}

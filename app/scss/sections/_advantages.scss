@@ -1,0 +1,96 @@
+@import "../helpers/_vars";
+@import "../helpers/_mixins";
+
+.advantages {
+  background: url(../img/graphic.svg) repeat-x top, linear-gradient(180deg, #eef2fa 31.11%, #fff 54.11%);
+
+
+  @media (max-width: $tablet) {
+    margin-top: -270px;
+    background: url(../img/graphic-clean.svg) repeat-x top, linear-gradient(180deg, #eef2fa 31.11%, #fff 54.11%);
+  }
+
+  h2 {
+    padding-top: 115px;
+    text-align: center;
+    @include section-title;
+
+    @media (max-width: $tablet) {
+      padding-top: 100px;
+    }
+  }
+
+  &__list {
+    padding-top: 78px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 32%;
+    margin-bottom: 47px;
+    line-height: 20px;
+    color: #000;
+
+    @media (max-width: $tablet) {
+      width: 48%;
+    }
+    @media (max-width: $note) {
+      width: 100%;
+    }
+
+    svg {
+      margin-top: -8px;
+    }
+
+    h3 {
+      font-weight: 700;
+      padding-bottom: 14px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    .icon {
+      width: 37px;
+      height: 37px;
+    }
+  }
+  &__box {
+    display: flex;
+  }
+  &__content {
+    margin-left: 15px;
+  }
+}
+
+.advantagesBox-bonus {
+  background: #fff;
+  ul {
+    margin-top: -6px;
+    padding-top: 0px;
+  }
+}
+
+// !!!TODO DELETE AFTER RESPONSIVE
+.howItWork,
+.price,
+.profit,
+.review,
+.contact {
+  overflow: hidden;
+}
+
+// Animation advantage section
+.advantages-bg {
+  .graphic {
+    &-cirlce3 {
+      opacity: 1;
+    }
+  }
+}
+
+.wave {
+  height: 60px;
+  background: url(../img/graphic-clean.svg) repeat-x top, linear-gradient(180deg, #eef2fa 31.11%, #fff 54.11%);
+}

@@ -1,0 +1,106 @@
+@import "../helpers/_vars";
+@import "../helpers/_mixins";
+
+.btn {
+  position: relative;
+  display: block;
+  height: 49px;
+  font-size: 16px;
+  line-height: 49px;
+  font-weight: 700;
+  border-radius: 35px;
+  outline: none;
+  font-family: $ff1;
+  font-size: $fs;
+  color: #fff;
+  background: transparent;
+  border: none;
+  z-index: 3;
+  text-align: center;
+  cursor: pointer;
+
+  &-wrap {
+    position: relative;
+    padding: 0 30px 0 30px;
+    max-width: 220px;
+    width: 100%;
+    border: none;
+    border-radius: 35px;
+    color: #fff;
+    background-image: linear-gradient(180deg, #ffbe34 0%, #ff8e5e 100%);
+    box-shadow: inset 0px 1px 0px rgba(239, 7, 7, 0.5);
+    transition: $ease-out;
+    z-index: 1;
+    cursor: pointer;
+
+    &:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 35px;
+      background-image: linear-gradient(180deg, #ff8e5e 0%, #ffbe34 100%);
+      transition: opacity $ease-out;
+      z-index: 2;
+      opacity: 0;
+    }
+
+    // &:after {
+    //   content: "";
+    //   display: block;
+    //   position: absolute;
+    //   top: 17px;
+    //   right: 19px;
+    //   width: 18px;
+    //   height: 18px;
+    //   background: url(../img/icons/arrow.svg) no-repeat center/cover;
+    //   z-index: 2;
+
+    //   @media (max-width: $tablet) {
+    //     display: none;
+    //   }
+    // }
+
+    @media (min-width: 1025px) {
+      &:hover {
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.btn-transparent {
+  border: 1px solid #fff;
+  box-shadow: inset 0px 0px 0px 1px transparent;
+  background: transparent;
+  transition: color $ease-out, border-color $ease-out, box-shadow $ease-out,
+    color $ease-out;
+
+  @media (min-width: 1025px) {
+    &:hover {
+      border: 1px solid $orange;
+      box-shadow: inset 0px 0px 0px 1px $orange;
+      color: #fca70c;
+    }
+  }
+}
+
+.input {
+  height: 49px;
+  background: #eef2fa;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 43px;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: transparent;
+  transition: box-shadow;
+}
+
+textarea {
+  resize: none;
+}

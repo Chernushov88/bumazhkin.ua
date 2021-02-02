@@ -1,0 +1,148 @@
+@import "../helpers/_vars";
+@import "../helpers/_mixins";
+
+.weCan {
+  padding-top: 183px;
+  padding-bottom: 80px;
+
+  @media (max-width: $tablet) {
+    padding-top: 80px;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $note) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__content {
+    padding-left: 25px;
+    position: relative;
+
+    @media (max-width: $note) {
+      padding-left: 0;
+      margin-bottom: 30px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 44px;
+      height: 9px;
+      top: -12px;
+      right: -115px;
+      background: #7057d6;
+      border-radius: 7px;
+      animation: animationBubble1 6s linear infinite;
+      will-change: transform;
+
+      @media (max-width: $note) {
+        right: inherit;
+        top: inherit;
+        left: 30px;
+        bottom: -110px;
+      }
+      @media (max-width: $phone) {
+        left: 15px;
+        bottom: -50px;
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 105px;
+      height: 9px;
+      top: 20px;
+      right: -220px;
+      background: #ffd943;
+      border-radius: 7px;
+      animation: animationBubble2 7s linear infinite;
+      will-change: transform;
+
+      @media (max-width: $note) {
+        right: inherit;
+        top: inherit;
+        left: 70px;
+        bottom: -75px;
+      }
+      @media (max-width: $phone-xl) {
+      }
+      @media (max-width: $phone) {
+        bottom: -15px;
+      }
+    }
+  }
+  &__img {
+    position: relative;
+    margin-top: -40px;
+    margin-right: 27px;
+
+    @media (max-width: $tablet) {
+      margin: 0;
+
+      img {
+        display: block;
+        max-width: 400px;
+      }
+    }
+
+    @media (max-width: $phone-xl) {
+      img {
+        display: block;
+        max-width: 100%;
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      bottom: 20px;
+      right: 8px;
+      background: transparent;
+      border: 8px solid #c1caff;
+      border-radius: 50%;
+      opacity: 0.38;
+      animation: animationBubble1 4s linear infinite;
+      will-change: transform;
+    }
+  }
+
+  h2 {
+    padding-bottom: 55px;
+    @include section-title;
+
+    @media (max-width: $note) {
+      padding-bottom: 30px;
+    }
+  }
+
+  li {
+    margin-bottom: 38px;
+    padding-left: 72px;
+    max-width: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
+    color: #393939;
+
+    @media (max-width: $note) {
+      margin-bottom: 30px;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      width: 46px;
+      height: 46px;
+      background: url(../img/icons/list.svg) no-repeat center/cover;
+    }
+  }
+}

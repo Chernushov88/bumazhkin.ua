@@ -1,0 +1,119 @@
+.remodal-wrapper {
+  background: rgba(#393939, 0.75) !important;
+}
+
+.remodal-close {
+  top: 25px;
+  right: 42px;
+  z-index: 9999;
+
+  &:before {
+    content: "" !important;
+    width: 39px !important;
+    height: 39px !important;
+    background: url(../img/icons/x-circle.svg) no-repeat center/cover;
+    font-size: 0 !important;
+  }
+}
+
+.formBox {
+  max-width: 522px;
+  min-height: 453px;
+  width: 100%;
+  padding: 39px 43px 49px 43px;
+  background: #fff;
+  border-radius: 43px;
+
+  @media (max-width: $phone-xl) {
+    padding: 60px 15px 40px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      padding-bottom: 18px;
+      font-size: 30px;
+      line-height: 37px;
+      font-weight: 700;
+      color: #39c0f8;
+
+      @media (max-width: $phone-xl) {
+        padding-bottom: 10px;
+        font-size: 24px;
+      }
+    }
+    &__text {
+      padding-bottom: 25px;
+      font-size: 16px;
+      line-height: 24px;
+      color: #393939;
+    }
+  }
+
+  .input {
+    margin-top: 14px;
+    display: block;
+    height: 43px;
+    line-height: 43px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 434px;
+    background: #eef2fa;
+    border-radius: 10px;
+    border: none;
+    color: #393939;
+  }
+  label {
+    display: block;
+    padding-left: 8px;
+    margin-bottom: 20px;
+    max-width: 434px;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .btn-wrap {
+    margin-left: 8px;
+    margin-top: 5px;
+
+    @media (max-width: $phone-xl) {
+      margin: 15px auto;
+
+      .btn {
+        margin: auto;
+      }
+    }
+  }
+}
+
+.remodal-common {
+  border-radius: 10px;
+  background: #3b3b3d;
+  text-align: center;
+  padding: 30px;
+  max-width: 300px;
+}
+
+.remodal-common .remodal-close:before {
+  top: -30px !important;
+  left: 0px !important;
+}
+
+.thanks__title {
+  padding-bottom: 15px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #515252;
+  text-transform: uppercase;
+}
+
+.thanks__text {
+  display: block;
+  padding-bottom: 15px;
+  padding-left: 0;
+  font-size: 17px;
+}
