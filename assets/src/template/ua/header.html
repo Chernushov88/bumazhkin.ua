@@ -1,0 +1,103 @@
+<header class="header">
+  <div class="wrapper">
+    <div class="header__box">
+      <div class="header__logo">
+        <a href="/" class="header__logo-link">
+          <img src="/img/logo.svg" alt="Бюро бумажкін" title="Бюро бумажкін"/>
+          <h1 class="offscreen">Бюро бумажкін</h1>
+        </a>
+      </div>
+
+      <div class="header__info">
+        <div class="header__info-row header__info-top">
+          <div class="header__menu">
+            <nav class="nav" id="nav">
+              <h2 class="offscreen">Навігаційне меню</h2>
+              <button class="burger">
+                <i></i>
+              </button>
+
+              <div class="overlay">
+                <ul class="nav__list">
+                  <li class="nav__item list-menu">
+                    <a class="nav__link">Послуги</a>
+                    <div class="list-menu__items">
+                      <a class="list-menu__item" href="/buhgalterske-obslugovuvannya/">Бухгалтерське обслуговування</a>
+                      <a class="list-menu__item" href="/business-registration/">Реєстрація фірми</a>
+                      <a class="list-menu__item" href="/kadrovij-oblik-bumazhkin/">Кадровий облік</a>
+                      <a class="list-menu__item" href="/elektronnij-dokumentoobig/">Електронний документообіг</a>
+                      <a class="list-menu__item" href="/reyestratsiya-fop-spd-flp/">Реєстрація ФОП</a>
+                      <a class="list-menu__item" href="/reyestratsiya-ooo-tov/">Реєстрація ТОВ</a>
+                    </div>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link scrolling__link" href="#advantages">Тарифи</a>
+                  </li>
+
+                  <li class="nav__item">
+                    <a class="nav__link scrolling__link" href="#review">Відгуки</a>
+                  </li>
+
+                  <li class="nav__item">
+                    <a class="nav__link" href="/blog-ua">Блог</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div class="header__phone">
+            <a href="tel:+380443945068">
+              <svg class="icon icon-phone">
+                <use xlink:href="./img/icons/sprite/sprite.svg#phone"></use>
+              </svg>
+              <span>+38 (044) 394 50 68</span>
+            </a>
+          </div>
+          <div class="header__lang">
+            <a href="/business-registration/ru/">RU</a>
+            <span>/</span>
+            <a class="active" href="/business-registration/">UA</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero">
+      <div class="hero__box">
+        <div class="hero__content">
+          <h2 class="hero__title">Допоможемо <br>зареєструвати фірму і налагодити процеси</h2>
+          <p class="hero__text">Плануєте почати свою справу? Це просто! Від ідеї до офіційних документів - всього кілька кроків.</p>
+
+          <form class="hero__form form-validate" name="order" method="POST" data-form="Открыть бизнес">
+            <div class="form__item">
+              <a href="#" class="btn btn-orange" data-remodal-target="callback">Відкрити бізнес</a>
+            </div>
+
+            <div class="form__item">
+              <a href="#advantages" class="btn btn-transparent scrolling__link">Переглянути ціни</a>
+            </div>
+          </form>
+        </div>
+
+        <div class="hero__img">
+          <img src="./img/hero-image-new.svg" alt="Бухгалтер, кадровик, юрист и финансист в одном сервисе">
+        </div>
+      </div>
+    </div>
+    <div class="remodal formBox" data-remodal-id="callback">
+      <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+      <form class="form form-validate" id="feedback-form" data-form="попап" method="POST" name="callback">
+        <p class="form__title">Заповніть заявку</p>
+        <p class="form__text">менеджер зв'яжеться з Вами для <br> уточнення деталей</p>
+        <label>Ім'я
+          <input class="input form-control" type="text" pattern="^[A-Za-zА-Яа-яЁёІіЇїЄє\s]+$" maxlenght="30" name="name" required>
+        </label>
+        <label>Номер телефону
+          <input class="input phone-mask form-control" type="tel" name="phone" required>
+        </label>
+        <div class="btn-wrap">
+          <input class="btn" type="submit" value="Передзвоніть">
+        </div>
+      </form>
+    </div>
+  </div>
+</header>
